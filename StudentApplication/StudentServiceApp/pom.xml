@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.student.app</groupId>
+    <artifactId>StudentApplication</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.student.service</groupId>
+  <artifactId>StudentServiceApp</artifactId>
+  <version>0.0.1-service</version>
+  <name>StudentServiceApp</name>
+  
+  <dependencies>
+  <dependency>
+   <groupId>com.student.dao</groupId>
+    <artifactId>StudentDaoApp</artifactId>
+    <version>0.0.1-dao</version>
+  </dependency>
+  </dependencies>
+</project>
