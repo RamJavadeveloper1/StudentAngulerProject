@@ -11,6 +11,8 @@ public interface StudentService {
 	public Student getStudentDetailsById(int studentId);
 	public List<Student> getStudentDetailsByName(String name);
 	public List<Student> deleteStudentDetailsById(int studentId);
+	public boolean stundentSearchbyId(int id); 
+	public int studentLoginJwt(String emailId, String password); 
 	
 	
 	

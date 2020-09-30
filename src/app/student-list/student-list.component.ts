@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../student.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-list',
@@ -11,11 +12,19 @@ export class StudentListComponent implements OnInit {
   id: number;
   name: string;
 
-  constructor(private service: StudentService) {}
+  constructor(
+    public service: StudentService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    let resp = this.service.getAllStudent();
-    resp.subscribe((data) => (this.students = data));
+    if (this.service.isLoggedIn()) {
+      let resp = this.service.getAllStudent();
+      resp.subscribe((data) => (this.students = data));
+    } else {
+      this.router.navigate(['/login']);
+    }
   }
 
   /**

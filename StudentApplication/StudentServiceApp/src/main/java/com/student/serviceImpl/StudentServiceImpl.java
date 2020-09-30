@@ -74,4 +74,13 @@ public class StudentServiceImpl implements StudentService {
 		return status;
 	}
 
+	public boolean stundentSearchbyId(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public int studentLoginJwt(String emailId, String password) {
+		return studentDao.studentLogin(emailId, password);
+	}
+
 }
